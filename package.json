@@ -1,6 +1,6 @@
 {
-  "name": "next-intl-bug-template",
-  "version": "2.10.2",
+  "name": "next-intl-bug-template-app-router-rsc",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^13.3.4",
-    "next-intl": "latest",
+    "next": "13.4.7",
+    "next-intl": "3.0.0-beta.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.0"

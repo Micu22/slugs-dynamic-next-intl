@@ -1,3 +1,3 @@
-module.exports = {
-  experimental: { appDir: true },
-};
+const withNextIntl = require("next-intl/plugin")();
+
+module.exports = withNextIntl();
