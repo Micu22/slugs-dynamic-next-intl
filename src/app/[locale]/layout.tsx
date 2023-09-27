@@ -1,13 +1,9 @@
-import {useLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
- 
-export default function LocaleLayout({children, params}) {
-  const locale = useLocale();
- 
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
-    notFound();
-  }
+import { locales } from '../../navigation';
+import { notFound } from 'next/navigation';
+
+export default function LocaleLayout({ children, params: { locale }}) {
+   // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
  
   return (
     <html lang={locale}>
