@@ -11,11 +11,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <main>
           <div>
             {locale === "en" ? (
-              <Link locale="ja" href="/test">
-                Go to Japanese Test Page
+              <Link locale="pl" href="/solutions/flyer">
+                Go to Polish Test Page
               </Link>
             ) : (
-              <Link locale="en" href="/test">
+              <Link locale="en" href="/solutions/flyer">
                 Go to English Test Page
               </Link>
             )}
