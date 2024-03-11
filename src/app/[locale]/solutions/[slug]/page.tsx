@@ -11,10 +11,8 @@ export async function generateStaticParams() {
   // console.log(printing_assets)
 
   return [
-    { slug: "/pl/rozwiazania/ulotka/" },
-    { slug: "/en/solutions/flyer/" },
-    { slug: "/pl/rozwiazania/ulotka/" },
-    { slug: "/en/solutions/flyer/" },
+    { slug: "/pl/rozwiazania/ulotka-2/" },
+    { slug: "/en/solutions/flyer-2/" },
   ];
 }
 
@@ -23,7 +21,6 @@ export default async function Page({
 }: {
   params: { slug: string; locale: string };
 }) {
-
   // Validate that the incoming `locale` parameter is valid
   const isValidLocale = locales.some((cur) => cur === locale);
 
@@ -33,14 +30,23 @@ export default async function Page({
   unstable_setRequestLocale(locale);
 
   return (
-          <>
-          <p>
-            {locale}
-            {slug}
-          </p>
-          <LanguageSwitcher /><br /><br /><br /><br />
-          <Link href="/rozwiazania/ulotka">Switch to Ulotka (Polish for Flyer)</Link><br />
-          <Link href="/solutions/flyer">Switch to Flyer (English for Ulotka)</Link>
-          </>
+    <>
+      <p>
+        {locale}
+        {slug}
+      </p>
+      <LanguageSwitcher />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Link href="/rozwiazania/ulotka-2">
+        Switch to Ulotka (Polish for Flyer)
+      </Link>
+      <br />
+      <Link href="/solutions/flyer-2">
+        Switch to Flyer (English for Ulotka)
+      </Link>
+    </>
   );
 }
